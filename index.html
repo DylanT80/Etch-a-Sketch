@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Etch-a-Sketch</h1>
+    </div>
+
+    <div class="main-container">
+      <div class="main-grid-container">
+        <div class="options-container">
+          <div class="slider-container">
+            <p class="size-number"></p>
+            <input
+              onchange="changeSize(event)"
+              type="range"
+              min="16"
+              max="100"
+              value="16"
+              class="size-slider"
+            />
+          </div>
+          <button onclick="clearAll()">Clear All</button>
+        </div>
+
+        <div class="color-container">
+          <button
+            style="background-color: gainsboro"
+            onclick="addColor()"
+          ></button>
+          <button
+            class="selected-color"
+            style="background-color: red"
+            onclick="changeColor(event)"
+          ></button>
+          <button
+            style="background-color: green"
+            onclick="changeColor(event)"
+          ></button>
+          <button
+            style="background-color: blue"
+            onclick="changeColor(event)"
+          ></button>
+          <button
+            style="background-color: white"
+            onclick="changeColor(event)"
+          ></button>
+        </div>
+
+        <div class="grid-container"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
